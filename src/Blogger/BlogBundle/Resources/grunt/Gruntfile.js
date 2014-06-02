@@ -5,15 +5,33 @@
 module.exports=function(grunt){
     grunt.initConfig({
         pkg:grunt.file.readJSON('package.json'),
-        concat:{
-            options: {separator:';'},
-            dist:{
-                src:['../jQuery/jquery-1.11.1.min.js','./src/Blogger/BlogBundle/Resources/scripts/blog.js'],
-                dest:'../../../../../web/scripts/blog.min.js'
+        uglify:{
+            my_target:{
+                files:{
+                    '../../../../../web/scripts/blog.min.js':
+                        [
+                            '../jQuery/jquery-1.11.1.min.js',
+                            '../bootstrap/js/dropdown.js',
+                            '../bootstrap/js/collapse.js',
+                            '../scripts/blog.js'
+                        ]
+                }
             }
         },
-        uglify:{}
+        less: {
+            production:{
+                options: {
+                    cleancss: true,
+                    compress: true,
+                    relativeUrls: true
+                },
+                files:{
+                    '../../../../../web/styles/blog.min.css':'../styles/blog.less'
+                }
+            }
+        }
     });
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.registerTask('build',['concat']);
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.registerTask('build',['uglify','less:production']);
 };
