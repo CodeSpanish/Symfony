@@ -10,9 +10,8 @@ module.exports=function(grunt){
                 files:{
                     '../../../../../web/scripts/blog.min.js':
                         [
-                            '../jQuery/jquery-1.11.1.min.js',
-                            '../bootstrap/js/dropdown.js',
-                            '../bootstrap/js/collapse.js',
+                            '../jQuery/jquery.min.js',
+                            '../bootstrap/js/bootstrap.min.js',
                             '../scripts/blog.js'
                         ]
                 }
@@ -31,6 +30,7 @@ module.exports=function(grunt){
             }
         }
     });
+
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.registerTask('build',['uglify','less:production']);
