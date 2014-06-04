@@ -5,23 +5,18 @@
     <ul class="nav navbar-nav navbar-right">
         <li><a href="{{ path('BloggerBlogBundle_homepage') }}">Home</a></li>
         <li class="active"><a href="{{ path('BloggerBlogBundle_about') }}">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="{{ path('BloggerBlogBundle_contact') }}">Contact</a></li>
     </ul>
 {% endblock %}
 
 {% block content %}
     <header>
-        <h1>About symblog</h1>
+        <h3>About symblog</h3>
     </header>
-    <article>
-        <p>Donec imperdiet ante sed diam consequat et dictum erat faucibus. Aliquam sit
-            amet vehicula leo. Morbi urna dui, tempor ac posuere et, rutrum at dui.
-            Curabitur neque quam, ultricies ut imperdiet id, ornare varius arcu. Ut congue
-            urna sit amet tellus malesuada nec elementum risus molestie. Donec gravida
-            tellus sed tortor adipiscing fringilla. Donec nulla mauris, mollis egestas
-            condimentum laoreet, lacinia vel lorem. Morbi vitae justo sit amet felis
-            vehicula commodo a placerat lacus. Mauris at est elit, nec vehicula urna. Duis a
-            lacus nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-            posuere cubilia Curae.</p>
-    </article>
+    <p>
+        Like you, I used to think the world was this great place where everybody lived by the same standards I did,
+        then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world
+        where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules,
+        then you're gonna have to pay the price.
+    </p>
 {% endblock %}

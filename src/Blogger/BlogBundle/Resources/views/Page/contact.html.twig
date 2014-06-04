@@ -1,0 +1,17 @@
+{% extends 'BloggerBlogBundle::layout.html.twig' %}
+
+{% block title %}Contact{% endblock%}
+{% block main_menu %}
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{ path('BloggerBlogBundle_homepage') }}">Home</a></li>
+        <li><a href="{{ path('BloggerBlogBundle_about') }}">About</a></li>
+        <li class="active"><a href="{{ path('BloggerBlogBundle_contact') }}">Contact</a></li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <header>
+        <h3>Contact</h3>
+    </header>
+    <p>Contact goes here</p>
+{% endblock %}

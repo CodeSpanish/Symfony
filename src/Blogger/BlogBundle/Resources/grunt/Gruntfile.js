@@ -15,6 +15,15 @@ module.exports=function(grunt){
                             '../scripts/blog.js'
                         ]
                 }
+            },
+            my_target_2:{
+                files:{
+                    '../../../../../web/scripts/blog-ie.min.js':
+                        [
+                            '../bootstrap/js/html5shiv.js',
+                            '../bootstrap/js/respond.min.js'
+                        ]
+                }
             }
         },
         less: {
